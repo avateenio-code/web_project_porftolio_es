@@ -27,7 +27,7 @@
 }
 
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   background-color: #050510;
   background-image:
@@ -53,29 +53,19 @@ body {
   background-attachment: fixed;
 }
 
-@media (max-width: 320px) {
-  .projects-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .header-image {
-    position: absolute;
-  }
-}
-
 header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
   margin-top: 10px;
   position: relative;
+  margin: auto;
 }
 
 .header-content {
   width: auto;
   flex: 1 1 0;
+  margin: auto;
 }
 
 .header-container {
@@ -84,6 +74,15 @@ header {
   flex-wrap: nowrap;
   align-items: center;
   padding: 50px;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    gap: 30px;
+  }
 }
 
 .header-image {
@@ -105,6 +104,10 @@ header {
   font-size: 72px;
   color: #ffffff;
   margin-bottom: 20px;
+}
+
+.header-title:hover {
+  color: #00ff7b;
 }
 
 .header-subtitle {
@@ -182,15 +185,26 @@ a {
   color: #ffffff;
   margin-bottom: 20px;
   padding: 0 50px;
+  margin: auto;
 }
 
 .section-icons {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 50px;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .section-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 53px;
+  }
 }
 
 .icon-item {
